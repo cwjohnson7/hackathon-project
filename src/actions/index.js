@@ -7,6 +7,5 @@ export function fetchAlbums(query) {
 }
 
 export function chooseWinner() {
-  //click event listner to choose winner of bracket, updates state. 
+  //placed in each bracket for the user to click and run, should update state to move the selected album to the next sequential bracket
 }
-
