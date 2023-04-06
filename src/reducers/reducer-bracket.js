@@ -3,10 +3,10 @@ import { CHOOSE_WINNER } from "../actions";
 
 const DEFAULT_STATE = {
   brackets: [{
-    round1A: ['Tommy', 'Billy'],
-    round1B: ['Bob', 'Andy'],
+    round1A: ['Tommy','Billy'],
+    round1B: ['Bob','Andy'],
     round1C: ['William','Susan'],
-    round1D: ['Tina', 'Faye']},
+    round1D: ['Tina','Faye']},
     {round2A: [],
     round2B: []},
     {round3: []},
@@ -22,8 +22,8 @@ const BracketReducer = function(state = DEFAULT_STATE, action) {
     case CHOOSE_WINNER:
       return state;
 
-      default:
-        return state;
+    default:
+      return state;
   }
 
 }

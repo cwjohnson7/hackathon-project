@@ -5,7 +5,10 @@ import Bracket from './components/bracket';
 
 function App() {
   return (
-    <Bracket/>
+    <div>
+      <Header />
+      <Bracket/>
+    </div>
   );
 }
 
