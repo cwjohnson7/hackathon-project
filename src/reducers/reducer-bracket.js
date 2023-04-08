@@ -7,10 +7,10 @@ const DEFAULT_STATE = {
     round1B: ['Bob','Andy'],
     round1C: ['William','Susan'],
     round1D: ['Tina','Faye']},
-    {round2A: [],
-    round2B: []},
-    {round3: []},
-    {winner: []}
+    {round2A: ['',''],
+    round2B: ['','']},
+    {round3: ['','']},
+    {winner: ['']}
   ],
 }
 
@@ -20,7 +20,7 @@ const BracketReducer = function(state = DEFAULT_STATE, action) {
       return state;
 
     case CHOOSE_WINNER:
-      return state;
+      return action.payload.data;
 
     default:
       return state;

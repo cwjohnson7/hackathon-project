@@ -1,17 +1,22 @@
 import React from "react";
 import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { chooseWinner } from "../actions";
 import './bracket.css';
 
 
 const BracketView = () => {
+  // const contestants = useSelector((state) => state.brackets);
+  const contestants = 'Contestant 1';
+
+
   const [selectedWinner, setWinner] = useState('');
   const dispatch = useDispatch();
   const handleSelectedWinnerClick = (e) => {
     //not sure if we need to use preventDefault or not here since the click event won't be on a <button/> with a 'submit' prop
-    //e.preventDefault();
-    dispatch(chooseWinner(selectedWinner))
+    setWinner(e.target.value)
+    // dispatch(chooseWinner(selectedWinner))
+    console.log(selectedWinner);
   }
  
 

@@ -1,3 +1,19 @@
+// const DEFAULT_STATE = {
+//   round1: [{
+//     branch1A: ['Tommy','Billy'],
+//     branch1B: ['Bob','Andy'],
+//     branch1C: ['William','Susan'],
+//     branch1D: ['Tina','Faye']
+//   }],
+//   round2: [{
+//     round2A: [],
+//     round2B: []
+//   }],
+//   round3: [],
+//   winner: [],
+// }
+
+
 //1. The first line of code selects the ".tournament" element and assigns it to the variable "$tournament" using jQuery.
 // 2. The "$bracket" variable is created and assigned a jQuery object that represents an unordered list with two empty list items. This represents the initial state of the tournament bracket.
 // 3. The "participants" array is created, which contains the names of all the participants in the tournament.
