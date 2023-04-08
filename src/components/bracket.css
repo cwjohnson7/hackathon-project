@@ -1,14 +1,36 @@
+.container {
+	display: flexbox;
+	justify-content: center;
+}
+
+
 .col-1-8 {
 	width: 12.5%;
 	float: left;
 }
-.round-two-top {
+
+.left-hand-bracket {
+	display: flexbox;
+	top: 25 px;
+	left: 16 px;
+}
+.right-hand-bracket {
+	display: flexbox;
+	top: 25 px;
+	right: 16 px;
+}
+.round-two-right {
+	display: flex;
 	padding: 45px 0 0;
 }
-.round-two-bottom {
+.round-two-left {
+	display: flex;
 	padding: 80px 0 0;
 }
 .round-three {
+	display: flex;
+  justify-content: center;
+  align-items: center;
 	padding: 127px 0 0;
 }
 .col-1-4 {

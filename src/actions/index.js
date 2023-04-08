@@ -3,8 +3,15 @@ import axios from "axios";
 export const FETCH_ALBUMS = "FETCH_ALBUMS";
 export const CHOOSE_WINNER = "CHOOSE_WINNER";
 
+
 export function fetchAlbums(query) {
-  //api accessed via Axios get request using whatever search params we decide to use
+  const request = axios.get('');
+
+
+  return{
+    type: FETCH_ALBUMS,
+    payload: request
+  };
 }
 
 export function chooseWinner() {
