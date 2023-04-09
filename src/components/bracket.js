@@ -6,17 +6,19 @@ import './bracket.css';
 
 
 const BracketView = () => {
-  // const contestants = useSelector((state) => state.brackets);
-  const contestants = 'Contestant 1';
-
+  const contestants = useSelector((state) => state.bracket);
+  
+  // debugger;
 
   const [selectedWinner, setWinner] = useState('');
   const dispatch = useDispatch();
   const handleSelectedWinnerClick = (e) => {
-    //not sure if we need to use preventDefault or not here since the click event won't be on a <button/> with a 'submit' prop
+
+    // debugger;
     setWinner(e.target.value)
-    // dispatch(chooseWinner(selectedWinner))
+    dispatch(chooseWinner(e.target.value))
     console.log(selectedWinner);
+
   }
  
 
@@ -26,7 +28,7 @@ const BracketView = () => {
       <div className="col-1-8">
         <div className="left-hand-bracket">
     <ul className="matchup">
-      <li className="round1A"><span className="seed">1</span> Album 1</li>
+      <li className="round1A" onClick={handleSelectedWinnerClick}><span className="seed">1</span> {contestants.brackets[0].round1A[0]}</li>
       <li className="round1A"><span className="seed">8</span> Album 2</li>
     </ul>
     <ul className="matchup">

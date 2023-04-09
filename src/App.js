@@ -1,17 +1,21 @@
 
 import Header from './components/header';
 import Bracket from './components/bracket';
-import React, {useState,UseEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import { Credentials} from './credentials'
 
 const App = () => {
   const spotify = Credentials();
+  const listOfAlbumsFromAPI = [];
+  const listOfGenresFromAPI = [];
 
   console.log("render app")
 
   const [token, setToken] = useState('');  
-  const [albums, setAlbums] = useState(listofAlbumsFromAPI=[]);
+  const [albums, setAlbums] = useState(listOfAlbumsFromAPI);
+  //adding a state for genres
+  const [genres, setGenres] = useState(listOfGenresFromAPI);
 
   const dummyData = [
     {value: 1, name:'Album 1'},
@@ -42,7 +46,7 @@ const App = () => {
         headers: { 'Authorization' : 'Bearer ' + tokenResponse.data.access_token}
       })
       .then (albumRespone => {
-        setAlbums
+        setAlbums(albumRespone);
       })
       .then (genreResponse => {        
         setGenres({
@@ -53,7 +57,7 @@ const App = () => {
       
     });
 
-  }, [spotify.ClientId, spotify.ClientSecret]); 
+  }, [spotify.ClientId, spotify.ClientSecret, genres.selectedGenre]); 
 
 
 
