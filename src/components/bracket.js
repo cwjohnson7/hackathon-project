@@ -12,24 +12,29 @@ const BracketView = () => {
 
   const [selectedWinner, setWinner] = useState('');
   const dispatch = useDispatch();
+  
   const handleSelectedWinnerClick = (e) => {
-
+    // if(e.target.childNodes[2].data === contestants.brackets[0].round1A[0]){
+    //   dispatch(chooseWinner(e.target.childNodes[2].data));
+    // }
     // debugger;
-    setWinner(e.target.value)
-    dispatch(chooseWinner(e.target.value))
-    console.log(selectedWinner);
+    // setWinner('');
+    // setWinner(e.target.innerHTML)
+    // console.log(selectedWinner);
+    
+    dispatch(chooseWinner(e.target.innerText))
+    
 
   }
- 
 
   return (
-    <>
+    
     <div className="container">Bracket will be rendered here
       <div className="col-1-8">
         <div className="left-hand-bracket">
     <ul className="matchup">
-      <li className="round1A" onClick={handleSelectedWinnerClick}><span className="seed">1</span> {contestants.brackets[0].round1A[0]}</li>
-      <li className="round1A"><span className="seed">8</span> {contestants.brackets[0].round1A[1]}</li>
+      <li className="round1A"><span className="seed">1</span> <button id="button1A" onClick={handleSelectedWinnerClick}>{contestants.brackets[0].round1A[0]}</button></li>
+      <li className="round1A" onClick={handleSelectedWinnerClick}><span className="seed">8</span> {contestants.brackets[0].round1A[1]}</li>
     </ul>
     <ul className="matchup">
       <li className="round1B"><span className="seed">4</span> {contestants.brackets[1].round1B[0]}</li>
@@ -50,7 +55,7 @@ const BracketView = () => {
     <div className="col-1-8">
       <div className="round-two-left">
         <ul className="matchup">
-          <li className="round2A"><span className="seed">1</span> Winner 1: {contestants.brackets[4].round2A[0]}</li>
+          <li className="round2A"><span className="seed">1</span> Winner 1: {contestants.brackets[0].round1A[2]}</li>
           <li className="round2A"><span className="seed">4</span> Winner 2: {contestants.brackets[4].round2A[1]}</li>
         </ul>
     </div>
@@ -70,7 +75,7 @@ const BracketView = () => {
     </div>
   </div>
   </div>
-    </>
+    
   )
 }
 

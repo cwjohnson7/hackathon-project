@@ -20,9 +20,10 @@ const BracketReducer = function(state = DEFAULT_STATE, action) {
       return state;
 
     case CHOOSE_WINNER:
-      // console.log(state.brackets[0].round1A);
+      // console.log(state.brackets[4].round2A);
       console.log(action.payload);
-      return state;
+      // return state.brackets[4].round2A.concat(action.payload);
+      return state
 
     default:
       return state;

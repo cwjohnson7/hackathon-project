@@ -16,7 +16,6 @@ export function fetchAlbums(query) {
 
 export function chooseWinner(value) {
 
-  console.log(value);
   return{
     type: CHOOSE_WINNER,
     payload: value
