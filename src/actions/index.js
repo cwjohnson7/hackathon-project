@@ -1,18 +1,20 @@
 import axios from "axios";
-
-export const FETCH_ALBUMS = "FETCH_ALBUMS";
 export const CHOOSE_WINNER = "CHOOSE_WINNER";
+export const FETCH_ALBUMS = "FETCH_ALBUMS";
 
+const apikey= process.env
 
 export function fetchAlbums(query) {
-  const request = axios.get('');
-
-
+  const request = axios.get(`
+  http://ws.audioscrobbler.com//2.0/?method=tag.gettopalbums&tag=${query}&limit=8&${apikey}&format=json 
+  `);
+  
   return{
     type: FETCH_ALBUMS,
     payload: request
   };
 }
+
 
 export function chooseWinner(value) {
 

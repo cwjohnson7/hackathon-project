@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { chooseWinner } from "../actions";
 import './bracket.css';
+import Search from "./search";
 
 
 const BracketView = () => {
@@ -49,7 +50,8 @@ const BracketView = () => {
 
   return (
     
-    <div className="container">Bracket will be rendered here
+    <div className="container">
+      <div><Search/></div>
       <div className="col-1-8">
         <div className="left-hand-bracket">
     <ul className="matchup">
