@@ -1,0 +1,261 @@
+{
+  "albums": {
+    "album": [
+      {
+        "name": "Lover",
+        "mbid": "",
+        "url": "https://www.last.fm/music/Taylor+Swift",
+        "artist": {
+          "name": "Taylor Swift",
+          "mbid": "20244d07-534f-4eff-b4d4-930878889970",
+          "url": "https://www.last.fm/music/Taylor+Swift"
+        },
+        "image": [
+          {
+            "#text": "https://lastfm.freetls.fastly.net/i/u/34s/d3f083370c371a3ba1cddafaf193c27d.png",
+            "size": "small"
+          },
+          {
+            "#text": "https://lastfm.freetls.fastly.net/i/u/64s/d3f083370c371a3ba1cddafaf193c27d.png",
+            "size": "medium"
+          },
+          {
+            "#text": "https://lastfm.freetls.fastly.net/i/u/174s/d3f083370c371a3ba1cddafaf193c27d.png",
+            "size": "large"
+          },
+          {
+            "#text": "https://lastfm.freetls.fastly.net/i/u/300x300/d3f083370c371a3ba1cddafaf193c27d.png",
+            "size": "extralarge"
+          }
+        ],
+        "@attr": {
+          "rank": "1"
+        }
+      },
+      {
+        "name": "Thank U, Next",
+        "mbid": "",
+        "url": "https://www.last.fm/music/Ariana+Grande",
+        "artist": {
+          "name": "Ariana Grande",
+          "mbid": "f4fdbb4c-e4b7-47a0-b83b-d91bbfcfa387",
+          "url": "https://www.last.fm/music/Ariana+Grande"
+        },
+        "image": [
+          {
+            "#text": "https://lastfm.freetls.fastly.net/i/u/34s/5d67250ce101c8afaaa33b5d9f8926e2.png",
+            "size": "small"
+          },
+          {
+            "#text": "https://lastfm.freetls.fastly.net/i/u/64s/5d67250ce101c8afaaa33b5d9f8926e2.png",
+            "size": "medium"
+          },
+          {
+            "#text": "https://lastfm.freetls.fastly.net/i/u/174s/5d67250ce101c8afaaa33b5d9f8926e2.png",
+            "size": "large"
+          },
+          {
+            "#text": "https://lastfm.freetls.fastly.net/i/u/300x300/5d67250ce101c8afaaa33b5d9f8926e2.png",
+            "size": "extralarge"
+          }
+        ],
+        "@attr": {
+          "rank": "2"
+        }
+      },
+      {
+        "name": "Sweetener",
+        "mbid": "",
+        "url": "https://www.last.fm/music/Ariana+Grande",
+        "artist": {
+          "name": "Ariana Grande",
+          "mbid": "f4fdbb4c-e4b7-47a0-b83b-d91bbfcfa387",
+          "url": "https://www.last.fm/music/Ariana+Grande"
+        },
+        "image": [
+          {
+            "#text": "https://lastfm.freetls.fastly.net/i/u/34s/cd8c5ce4dad43c822c00dec987d295ca.png",
+            "size": "small"
+          },
+          {
+            "#text": "https://lastfm.freetls.fastly.net/i/u/64s/cd8c5ce4dad43c822c00dec987d295ca.png",
+            "size": "medium"
+          },
+          {
+            "#text": "https://lastfm.freetls.fastly.net/i/u/174s/cd8c5ce4dad43c822c00dec987d295ca.png",
+            "size": "large"
+          },
+          {
+            "#text": "https://lastfm.freetls.fastly.net/i/u/300x300/cd8c5ce4dad43c822c00dec987d295ca.png",
+            "size": "extralarge"
+          }
+        ],
+        "@attr": {
+          "rank": "3"
+        }
+      },
+      {
+        "name": "Butter / Permission to Dance",
+        "mbid": "",
+        "url": "https://www.last.fm/music/BTS",
+        "artist": {
+          "name": "BTS",
+          "mbid": "0d79fe8e-ba27-4859-bb8c-2f255f346853",
+          "url": "https://www.last.fm/music/BTS"
+        },
+        "image": [
+          {
+            "#text": "https://lastfm.freetls.fastly.net/i/u/34s/f14944a5f6bb6a70a0d1256524da9fc2.png",
+            "size": "small"
+          },
+          {
+            "#text": "https://lastfm.freetls.fastly.net/i/u/64s/f14944a5f6bb6a70a0d1256524da9fc2.png",
+            "size": "medium"
+          },
+          {
+            "#text": "https://lastfm.freetls.fastly.net/i/u/174s/f14944a5f6bb6a70a0d1256524da9fc2.png",
+            "size": "large"
+          },
+          {
+            "#text": "https://lastfm.freetls.fastly.net/i/u/300x300/f14944a5f6bb6a70a0d1256524da9fc2.png",
+            "size": "extralarge"
+          }
+        ],
+        "@attr": {
+          "rank": "4"
+        }
+      },
+      {
+        "name": "1989 (Deluxe)",
+        "mbid": "",
+        "url": "https://www.last.fm/music/Taylor+Swift",
+        "artist": {
+          "name": "Taylor Swift",
+          "mbid": "20244d07-534f-4eff-b4d4-930878889970",
+          "url": "https://www.last.fm/music/Taylor+Swift"
+        },
+        "image": [
+          {
+            "#text": "https://lastfm.freetls.fastly.net/i/u/34s/b315d7300320731d9644d7896c14241d.png",
+            "size": "small"
+          },
+          {
+            "#text": "https://lastfm.freetls.fastly.net/i/u/64s/b315d7300320731d9644d7896c14241d.png",
+            "size": "medium"
+          },
+          {
+            "#text": "https://lastfm.freetls.fastly.net/i/u/174s/b315d7300320731d9644d7896c14241d.png",
+            "size": "large"
+          },
+          {
+            "#text": "https://lastfm.freetls.fastly.net/i/u/300x300/b315d7300320731d9644d7896c14241d.png",
+            "size": "extralarge"
+          }
+        ],
+        "@attr": {
+          "rank": "5"
+        }
+      },
+      {
+        "name": "Dangerous Woman",
+        "mbid": "",
+        "url": "https://www.last.fm/music/Ariana+Grande",
+        "artist": {
+          "name": "Ariana Grande",
+          "mbid": "f4fdbb4c-e4b7-47a0-b83b-d91bbfcfa387",
+          "url": "https://www.last.fm/music/Ariana+Grande"
+        },
+        "image": [
+          {
+            "#text": "https://lastfm.freetls.fastly.net/i/u/34s/c01e49f1304ed48f058e28387f85749a.png",
+            "size": "small"
+          },
+          {
+            "#text": "https://lastfm.freetls.fastly.net/i/u/64s/c01e49f1304ed48f058e28387f85749a.png",
+            "size": "medium"
+          },
+          {
+            "#text": "https://lastfm.freetls.fastly.net/i/u/174s/c01e49f1304ed48f058e28387f85749a.png",
+            "size": "large"
+          },
+          {
+            "#text": "https://lastfm.freetls.fastly.net/i/u/300x300/c01e49f1304ed48f058e28387f85749a.png",
+            "size": "extralarge"
+          }
+        ],
+        "@attr": {
+          "rank": "6"
+        }
+      },
+      {
+        "name": "1989",
+        "mbid": "b15d9a20-5fe8-4b35-ad58-bf686787d950",
+        "url": "https://www.last.fm/music/Taylor+Swift",
+        "artist": {
+          "name": "Taylor Swift",
+          "mbid": "20244d07-534f-4eff-b4d4-930878889970",
+          "url": "https://www.last.fm/music/Taylor+Swift"
+        },
+        "image": [
+          {
+            "#text": "https://lastfm.freetls.fastly.net/i/u/34s/b71ba6cf5881d8cf143e0ad0b4f28d9f.png",
+            "size": "small"
+          },
+          {
+            "#text": "https://lastfm.freetls.fastly.net/i/u/64s/b71ba6cf5881d8cf143e0ad0b4f28d9f.png",
+            "size": "medium"
+          },
+          {
+            "#text": "https://lastfm.freetls.fastly.net/i/u/174s/b71ba6cf5881d8cf143e0ad0b4f28d9f.png",
+            "size": "large"
+          },
+          {
+            "#text": "https://lastfm.freetls.fastly.net/i/u/300x300/b71ba6cf5881d8cf143e0ad0b4f28d9f.png",
+            "size": "extralarge"
+          }
+        ],
+        "@attr": {
+          "rank": "7"
+        }
+      },
+      {
+        "name": "Teenage Dream",
+        "mbid": "d610e36f-aae9-4703-9a9b-355c9e8de6c7",
+        "url": "https://www.last.fm/music/Katy+Perry",
+        "artist": {
+          "name": "Katy Perry",
+          "mbid": "122d63fc-8671-43e4-9752-34e846d62a9c",
+          "url": "https://www.last.fm/music/Katy+Perry"
+        },
+        "image": [
+          {
+            "#text": "https://lastfm.freetls.fastly.net/i/u/34s/b740d32fdcf665acac089884286f24ff.png",
+            "size": "small"
+          },
+          {
+            "#text": "https://lastfm.freetls.fastly.net/i/u/64s/b740d32fdcf665acac089884286f24ff.png",
+            "size": "medium"
+          },
+          {
+            "#text": "https://lastfm.freetls.fastly.net/i/u/174s/b740d32fdcf665acac089884286f24ff.png",
+            "size": "large"
+          },
+          {
+            "#text": "https://lastfm.freetls.fastly.net/i/u/300x300/b740d32fdcf665acac089884286f24ff.png",
+            "size": "extralarge"
+          }
+        ],
+        "@attr": {
+          "rank": "8"
+        }
+      }
+    ],
+    "@attr": {
+      "tag": "pop",
+      "page": "1",
+      "perPage": "8",
+      "totalPages": "6055",
+      "total": "48435"
+    }
+  }
+}
