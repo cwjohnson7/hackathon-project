@@ -1,3 +1,4 @@
+import staticMethods from 'antd/es/message';
 import { React, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchAlbums } from "../actions";
@@ -10,6 +11,7 @@ const Search = () => {
     e.preventDefault();
     dispatch(fetchAlbums(query))
     setQuery('');
+    
   }
 
 
@@ -20,7 +22,7 @@ const Search = () => {
           <input
             className='form-control'
             name='genre'
-            placeholder='Genre (in lowercase)'
+            placeholder='Genre'
             value={query} onChange={(e) => setQuery(e.target.value)}
           >
           </input>
@@ -31,6 +33,8 @@ const Search = () => {
         </div>
       </form>
     </div>
+
+  
   )
 }
 

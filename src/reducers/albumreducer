@@ -1,0 +1,23 @@
+const AlbumReducer = function(state = [], action) {
+  switch (action.type) {
+    case 'FETCH_ALBUM':
+      if (!action.payload.albums) {
+        return state ;
+      };
+      const result = {
+        rank: action.payload.data.albums.album.rank,
+        image: action.payload.data.albums.album.image.large,
+        artist: action.payload.data.albums.album.artist.name,
+        album: action.payload.data.albums.album.name.map((result) => {
+          return {  
+          
+          };
+        })
+      };
+      return[...state, result];
+    default:
+      return state;
+  }
+};
+
+export default albumReducer;

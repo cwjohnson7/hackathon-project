@@ -19,33 +19,57 @@ const BracketView = () => {
   const [selectedChamp, setChamp] = useState('');
   const dispatch = useDispatch();
   
+// update useEffect to have winners persist as dependencies of the useEffect 
+
+// or look at handling the logic in the click effect if finalist 1 is not = to winner 1 or winner 2 update state.
+
+// if finalist1 notequal winner1/winner2 then value null:
+//
+
   const handleWinner1Click = (e) => {
-    // setWinner1(e.target.innerText);
+
     console.log(e.target.childNodes[2].data)
+    if (winner1) { 
+      return 
+    }
     setWinner1(e.target.childNodes[2].data)
-    // dispatch(chooseWinner(e.target.innerText))
+   
   }
   const handleWinner2Click = (e) => {
     console.log(e.target.childNodes[2].data)
+    if (winner2) {
+      return
+    }
     setWinner2(e.target.childNodes[2].data)
   }
   const handleWinner3Click = (e) => {
     console.log(e.target.childNodes[2].data)
+    if (winner3) {
+      return
+    }
     setWinner3(e.target.childNodes[2].data)
   }
   const handleWinner4Click = (e) => {
     console.log(e.target.childNodes[2].data)
+    if (winner4) {
+      return
+    }
     setWinner4(e.target.childNodes[2].data)
   }
   const handleFinalist1Click = (value) => {
+    if (finalist1) {
+      return
+    }
     setFinalist1(value);
   }
   const handleFinalist2Click = (value) => {
+    if (finalist2) {
+      return
+    }
     setFinalist2(value);
   }
   const handleChampClick = (value) => {
     setChamp(value);
-    alert('The champion is ' + selectedChamp + '!!!');
   }
 
   return (
@@ -55,7 +79,7 @@ const BracketView = () => {
       <div className="col-1-8">
         <div className="left-hand-bracket">
     <ul className="matchup">
-      <li className="round1A" onClick={handleWinner1Click}><span className="seed">1</span> {contestants.brackets[0].round1A[0]}</li>
+      <li className="round1A" onClick={handleWinner1Click} ><span className="seed">1</span> {contestants.brackets[0].round1A[0]}</li>
       <li className="round1A" onClick={handleWinner1Click}><span className="seed">8</span> {contestants.brackets[0].round1A[1]}</li>
     </ul>
     <ul className="matchup">
@@ -76,6 +100,7 @@ const BracketView = () => {
     </div>
     <div className="col-1-8">
       <div className="round-two-left">
+        
         <ul className="matchup">
           <li className="round2A" onClick={() => handleFinalist1Click(winner1)} ><span className="seed">1</span> Winner 1: {winner1}</li>
           <li className="round2A" onClick={() => handleFinalist1Click(winner2)}><span className="seed">4</span> Winner 2: {winner2}</li>
@@ -88,7 +113,7 @@ const BracketView = () => {
       </ul>
     </div>
   </div>
-    <div className="col-1-8 champ">
+    <div className="col-1-8 ">
     <div className="round-three">
       <ul className="matchup">
         <li className="round3" onClick={() => handleChampClick(finalist1)}><span className="seed">1</span> Finalist 1: {finalist1}</li>
@@ -96,7 +121,15 @@ const BracketView = () => {
       </ul>
     </div>
   </div>
+  <div className="col-1-8 champ">
+    <div className="round-three">
+      <ul className="matchup">
+        <li className="round4" onClick={() => handleChampClick()}><span className="seed">1</span> Champion: {selectedChamp}</li>
+      </ul>
+    </div>
   </div>
+  </div>
+  
     
   )
 }
