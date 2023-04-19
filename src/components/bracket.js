@@ -21,31 +21,47 @@ const BracketView = () => {
   // const dispatch = useDispatch();
   
   function handleWinner1Click (image, record, artist) {
-    // setWinner1(e.target.innerText);
-    // console.log([image, record, artist])
+    if (winner1) {
+      return
+    }
     setWinner1([image, record, artist])
     
     // dispatch(chooseWinner(e.target.innerText))
   }
   const handleWinner2Click = (image, record, artist) => {
-    
+    if (winner2) {
+      return
+    }
     setWinner2([image, record, artist])
   }
   const handleWinner3Click = (image, record, artist) => {
-    
+    if (winner3) {
+      return
+    }
     setWinner3([image, record, artist])
   }
   const handleWinner4Click = (image, record, artist) => {
-    
+    if (winner4) {
+      return
+    }
     setWinner4([image, record, artist])
   }
   const handleFinalist1Click = ([image, record, artist]) => {
+    if (finalist1) {
+      return
+    }
     setFinalist1([image, record, artist]);
   }
   const handleFinalist2Click = ([image, record, artist]) => {
+    if (finalist2) {
+      return
+    }
     setFinalist2([image, record, artist]);
   }
   const handleChampClick = (champion) => {
+    if (champion) {
+      return
+    }
 
     alert('The champion is ' + champion + '!!!');
   }

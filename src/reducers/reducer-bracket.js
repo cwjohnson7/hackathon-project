@@ -12,7 +12,7 @@ const BracketReducer = function(state = DEFAULT_STATE, action) {
     case FETCH_ALBUMS:
       // console.log(action.payload.data.albums.album)
       return {
-        brackets: [action.payload.data.albums.album, ...state.brackets]
+        brackets: [action.payload.data.albums.album]
       };
 
     case CHOOSE_WINNER:
