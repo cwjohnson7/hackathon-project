@@ -1,7 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-// import { chooseWinner } from "../actions";
+import { useSelector } from "react-redux";
 import _ from 'lodash';
 import './bracket.css';
 import Search from "./search";
@@ -10,65 +9,66 @@ import Search from "./search";
 const BracketView = () => {
   const contestants = useSelector((state) => state.bracket);
   
-  // debugger;
   const [winner1, setWinner1] = useState([]);
   const [winner2, setWinner2] = useState([]);
   const [winner3, setWinner3] = useState([]);
   const [winner4, setWinner4] = useState([]);
   const [finalist1, setFinalist1] = useState([]);
   const [finalist2, setFinalist2] = useState([]);
-  // const [selectedChamp, setChamp] = useState([]);
-  // const dispatch = useDispatch();
+  const [selectedChamp, setChamp] = useState([]);
   
   function handleWinner1Click (image, record, artist) {
-    if (winner1) {
-      return
+    if (!_.isEmpty(winner1)) {
+      alert('Contestant has already been selected for this spot')
     }
     setWinner1([image, record, artist])
-    
-    // dispatch(chooseWinner(e.target.innerText))
   }
   const handleWinner2Click = (image, record, artist) => {
-    if (winner2) {
-      return
+    if (!_.isEmpty(winner2)) {
+      alert('Contestant has already been selected for this spot')
     }
     setWinner2([image, record, artist])
   }
   const handleWinner3Click = (image, record, artist) => {
-    if (winner3) {
-      return
+    if (!_.isEmpty(winner3)) {
+      alert('Contestant has already been selected for this spot')
     }
     setWinner3([image, record, artist])
   }
   const handleWinner4Click = (image, record, artist) => {
-    if (winner4) {
-      return
+    if (!_.isEmpty(winner4)) {
+      alert('Contestant has already been selected for this spot')
     }
     setWinner4([image, record, artist])
   }
+
+  //Finalist1 Click --
   const handleFinalist1Click = ([image, record, artist]) => {
-    if (finalist1) {
-      return
+    if (!_.isEmpty(finalist1)) {
+      return alert('Contestant has already been selected for this spot')
+    }
+    if (image === undefined) {
+      return alert('Please select a winner')
     }
     setFinalist1([image, record, artist]);
   }
   const handleFinalist2Click = ([image, record, artist]) => {
-    if (finalist2) {
-      return
+    if (!_.isEmpty(finalist2)) {
+      alert('Contestant has already been selected for this spot')
     }
     setFinalist2([image, record, artist]);
   }
-  const handleChampClick = (champion) => {
-    if (champion) {
-      return
+  const handleChampClick = ([image, record, artist]) => {
+    if (!_.isEmpty(selectedChamp)) {
+      alert('Contestant has already been selected for this spot')
     }
 
-    alert('The champion is ' + champion + '!!!');
+    alert('The champion is ' + record + '!!!');
+    setChamp([image, record, artist])
   }
   if(!_.isEmpty(contestants.brackets)) {
   return (
     <div className="container">
-      <div><Search/></div>
       <div className="col-1-8">
         <div className="left-hand-bracket">
           <ul className="matchup">
@@ -133,12 +133,19 @@ const BracketView = () => {
           </ul>
         </div>
       </div>
+      <div className="col-1-8 champ">
+    <div className="round-three">
+      <ul className="matchup">
+        <li className="round4" onClick={() => handleChampClick()}><span className="seed">1</span> Champion: <img src={selectedChamp[0]} alt=""/> Album: {selectedChamp[1]} Artist: {selectedChamp[2]}</li>
+      </ul>
+    </div>
+  </div>
     </div>
   )}
   return (
     <div className="container">
       <div>Enter a music genre!</div>
-    <div><Search/></div>
+      <div><Search/></div>
     </div>   
   )
   

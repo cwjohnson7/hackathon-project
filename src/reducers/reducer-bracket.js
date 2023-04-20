@@ -1,5 +1,5 @@
 import { FETCH_ALBUMS } from "../actions";
-import { CHOOSE_WINNER } from "../actions";
+import { CLEAR_BRACKET } from "../actions";
 
 const DEFAULT_STATE = {
   brackets: [
@@ -15,7 +15,7 @@ const BracketReducer = function(state = DEFAULT_STATE, action) {
         brackets: [action.payload.data.albums.album]
       };
 
-    case CHOOSE_WINNER:
+    case CLEAR_BRACKET:
       // console.log(state.brackets[4].round2A);
       // console.log(action.payload);
       // return state.brackets[4].round2A.concat(action.payload);

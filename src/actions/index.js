@@ -1,5 +1,5 @@
 import axios from "axios";
-export const CHOOSE_WINNER = "CHOOSE_WINNER";
+export const CLEAR_BRACKET = "CLEAR_BRACKET";
 export const FETCH_ALBUMS = "FETCH_ALBUMS";
 
 const apikey= process.env.REACT_APP_API_KEY;
@@ -16,10 +16,10 @@ export function fetchAlbums(query) {
 }
 
 
-export function chooseWinner(value) {
+export function clearBracket(value) {
 
   return{
-    type: CHOOSE_WINNER,
+    type: CLEAR_BRACKET,
     payload: value
   }
 }
