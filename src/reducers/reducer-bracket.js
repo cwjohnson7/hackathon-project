@@ -16,10 +16,13 @@ const BracketReducer = function(state = DEFAULT_STATE, action) {
       };
 
     case CLEAR_BRACKET:
-      // console.log(state.brackets[4].round2A);
+      console.log('CLEAR_BRACKET');
       // console.log(action.payload);
       // return state.brackets[4].round2A.concat(action.payload);
-      return state
+      return {
+        ...state,
+        brackets: []
+      }
 
     default:
       return state;

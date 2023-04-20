@@ -16,10 +16,9 @@ export function fetchAlbums(query) {
 }
 
 
-export function clearBracket(value) {
+export function clearBracket(array) {
 
   return{
-    type: CLEAR_BRACKET,
-    payload: value
+    type: CLEAR_BRACKET
   }
 }

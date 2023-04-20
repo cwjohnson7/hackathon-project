@@ -1,13 +1,15 @@
 import React from "react";
 import { useState } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import _ from 'lodash';
 import './bracket.css';
 import Search from "./search";
+import { clearBracket } from "../actions";
 
 
 const BracketView = () => {
   const contestants = useSelector((state) => state.bracket);
+  const dispatch = useDispatch();
   
   const [winner1, setWinner1] = useState([]);
   const [winner2, setWinner2] = useState([]);
@@ -62,10 +64,22 @@ const BracketView = () => {
     if (!_.isEmpty(selectedChamp)) {
       alert('Contestant has already been selected for this spot')
     }
-
     alert('The champion is ' + record + '!!!');
     setChamp([image, record, artist])
   }
+
+  const handleResetClick = () => {
+    setWinner1([])
+    setWinner2([])
+    setWinner3([])
+    setWinner4([])
+    setFinalist1([])
+    setFinalist2([])
+    setChamp([])
+    dispatch(clearBracket());
+
+  }
+
   if(!_.isEmpty(contestants.brackets)) {
   return (
     <div className="container">
@@ -128,15 +142,15 @@ const BracketView = () => {
       <div className="col-1-8 champ">
         <div className="round-three">
           <ul className="matchup">
-            <li className="round3" onClick={() => handleChampClick(finalist1[1])}><span className="seed">1</span> Finalist 1: <img src={finalist1[0]} alt=""/> Album: {finalist1[1]} Artist: {finalist1[2]}</li>
-            <li className="round3" onClick={() => handleChampClick(finalist2[1])}><span className="seed">3</span> Finalist 2: <img src={finalist2[0]} alt=""/> Album: {finalist2[1]} Artist: {finalist2[2]}</li>
+            <li className="round3" onClick={() => handleChampClick(finalist1)}><span className="seed">1</span> Finalist 1: <img src={finalist1[0]} alt=""/> Album: {finalist1[1]} Artist: {finalist1[2]}</li>
+            <li className="round3" onClick={() => handleChampClick(finalist2)}><span className="seed">3</span> Finalist 2: <img src={finalist2[0]} alt=""/> Album: {finalist2[1]} Artist: {finalist2[2]}</li>
           </ul>
         </div>
       </div>
       <div className="col-1-8 champ">
     <div className="round-three">
       <ul className="matchup">
-        <li className="round4" onClick={() => handleChampClick()}><span className="seed">1</span> Champion: <img src={selectedChamp[0]} alt=""/> Album: {selectedChamp[1]} Artist: {selectedChamp[2]}</li>
+        <li className="round4" onClick={() => handleResetClick()}><span className="seed">1</span> Champion: <img src={selectedChamp[0]} alt=""/> Album: {selectedChamp[1]} Artist: {selectedChamp[2]}</li>
       </ul>
     </div>
   </div>
