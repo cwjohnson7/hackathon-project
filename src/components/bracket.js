@@ -83,7 +83,6 @@ const BracketView = () => {
     setFinalist2([])
     setChamp([])
     dispatch(clearBracket());
-
   }
 
   if(!_.isEmpty(contestants.brackets)) {
@@ -168,11 +167,6 @@ const BracketView = () => {
       <div><Search/></div>
     </div>   
   )
-  
 }
   
-
-
 export default BracketView;
-
-

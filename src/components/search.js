@@ -1,4 +1,3 @@
-import staticMethods from 'antd/es/message';
 import { React, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchAlbums } from "../actions";
