@@ -21,25 +21,25 @@ const BracketView = () => {
   
   function handleWinner1Click (image, record, artist) {
     if (!_.isEmpty(winner1)) {
-      alert('Contestant has already been selected for this spot')
+      return alert('Contestant has already been selected for this spot')
     }
     setWinner1([image, record, artist])
   }
   const handleWinner2Click = (image, record, artist) => {
     if (!_.isEmpty(winner2)) {
-      alert('Contestant has already been selected for this spot')
+      return alert('Contestant has already been selected for this spot')
     }
     setWinner2([image, record, artist])
   }
   const handleWinner3Click = (image, record, artist) => {
     if (!_.isEmpty(winner3)) {
-      alert('Contestant has already been selected for this spot')
+      return alert('Contestant has already been selected for this spot')
     }
     setWinner3([image, record, artist])
   }
   const handleWinner4Click = (image, record, artist) => {
     if (!_.isEmpty(winner4)) {
-      alert('Contestant has already been selected for this spot')
+      return alert('Contestant has already been selected for this spot')
     }
     setWinner4([image, record, artist])
   }
@@ -49,22 +49,28 @@ const BracketView = () => {
     if (!_.isEmpty(finalist1)) {
       return alert('Contestant has already been selected for this spot')
     }
-    if (image === undefined) {
+    if (winner1[0] === undefined || winner2[0] === undefined) {
       return alert('Please select a winner')
     }
     setFinalist1([image, record, artist]);
   }
   const handleFinalist2Click = ([image, record, artist]) => {
     if (!_.isEmpty(finalist2)) {
-      alert('Contestant has already been selected for this spot')
+      return alert('Contestant has already been selected for this spot')
+    }
+    if (winner3[0] === undefined || winner4[0] === undefined) {
+      return alert('Please select a winner')
     }
     setFinalist2([image, record, artist]);
   }
   const handleChampClick = ([image, record, artist]) => {
     if (!_.isEmpty(selectedChamp)) {
-      alert('Contestant has already been selected for this spot')
+      return alert('Contestant has already been selected for this spot')
     }
-    alert('The champion is ' + record + '!!!');
+    if (finalist1[0] === undefined || finalist2[0] === undefined) {
+      return alert('Please select a winner')
+    }
+    alert('The champion is ' + record + ' by ' + artist + '!!! Click the champion tile to clear the bracket and search again.');
     setChamp([image, record, artist])
   }
 
